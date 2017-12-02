@@ -19,12 +19,12 @@ a party reaches the threshold, but the sum of that party's candidates exceeds th
 party's top vote getter shall be a winning candidate.
 
 For example, suppose an election has the following result and a qualifying threshold of 10%:
-Candidate A, Party A, 60% of vote.
-Candidate B, Party B, 20% of vote.
-Candidate C, Unaffiliated, 7% of vote.
-Candidate D, Party C, 6% of vote.
-Candidate E, Party C, 4% of vote.
-Candidate F, Unaffiliated, 3% of vote.
+* Candidate A, Party A, 60% of vote.
+* Candidate B, Party B, 20% of vote.
+* Candidate C, Unaffiliated, 7% of vote.
+* Candidate D, Party C, 6% of vote.
+* Candidate E, Party C, 4% of vote.
+* Candidate F, Unaffiliated, 3% of vote.
 The winning candidates are A, B, and D, and they shall each be the voting representative for 70%,
 23%, and 7% of days in the legislative sessions in the two year term following the election, respectively.
 
@@ -42,6 +42,6 @@ the winner has actually served as the voting representative, among days already 
 The winner with the largest such difference shall be the voting representative for that day.
 
 This analysis allocates voting days to winning candidates, then for that allocation determines:
--- The percentage of seat-days held by each party.
--- The percentage of days in each legislative session where each party holds a majority of votes in the House.
--- The maximum number of voting representatives each party holds for at least one day in the session.
+* The percentage of seat-days held by each party.
+* The percentage of days in each legislative session where each party holds a majority of votes in the House.
+* The maximum number of voting representatives each party holds for at least one day in the session.
