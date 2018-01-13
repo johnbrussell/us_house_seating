@@ -22,7 +22,7 @@ def determine_days_won(district_winners):
     difference_days_served = calculate_differences(exp_days_served, days_served)
 
     representative_list = list()
-    for day in range(1, DAYS_IN_TERM):
+    for day in range(0, DAYS_IN_TERM):
         candidate = determine_days_candidate(difference_days_served, district_winners)
         representative_list.append(candidate)
         days_served[candidate.name] += 1
@@ -33,7 +33,7 @@ def determine_days_won(district_winners):
 
 
 def calculate_vote_shares(district_winners):
-    total_votes = sum([int(candidate.votes) if candidate.votes != "NA" else 1 for candidate in district_winners])
+    total_votes = sum([(int(candidate.votes) if candidate.votes != "NA" else 1) for candidate in district_winners])
     vote_shares = dict()
     for candidate in district_winners:
         vote_shares[candidate.name] = (int(candidate.votes) if candidate.votes != 'NA' else 1) / float(total_votes)
