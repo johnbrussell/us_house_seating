@@ -18,7 +18,7 @@ def filter_for_winners(district_result):
                 party_winners[candidate.party] = candidate
                 party_votes[candidate.party] = int(candidate.votes) if candidate.votes != 'NA' else 1
         else:
-            if candidate.votes > party_winners[candidate.party].votes:
+            if (int(candidate.votes) if candidate.votes != 'NA' else 1) > party_winners[candidate.party].votes:
                 party_winners[candidate.party] = candidate
             party_votes[candidate.party] += int(candidate.votes) if candidate.votes != 'NA' else 1
 

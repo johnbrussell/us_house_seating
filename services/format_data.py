@@ -16,6 +16,8 @@ def read_in_data():
 
 
 def format_line(line, cols):
+    # Each line corresponds to a candidate's results; this function formats each candidate's result into a
+    #  candidate namedtuple.
     party_and_name = line[cols["Candidate"]]
     party = party_and_name[0]
     name = party_and_name[1:].lstrip(' ').lstrip("Winner").strip(' ').rstrip('(i)').rstrip(' ')
@@ -24,6 +26,7 @@ def format_line(line, cols):
 
 
 def format_results(unformatted_results):
+    # This function takes the list of candidate namedtuples and groups them by state and district.
     states = dict()
     for result in unformatted_results:
         if result.state not in states:
@@ -41,8 +44,10 @@ def format_results(unformatted_results):
 
 
 def separate_columns_from_data(data_gen):
+    # data_gen is a generator of the data from the CSV file that is the input.  This function separates that
+    #  generator into its first element (ie., the columns of the data) and the rest of the data.
     columns = data_gen.next()
-    data = dataWithColumns(data=data_gen, columns= create_csv_column_dict(columns))
+    data = dataWithColumns(data=data_gen, columns=create_csv_column_dict(columns))
     return data
 
 
